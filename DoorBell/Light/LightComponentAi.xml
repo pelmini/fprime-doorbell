@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../Autocoders/schema/ISF/component_schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+<component name="Light" kind="passive" namespace="DoorBell" modeler="true">
+
+    <import_port_type>DoorBell/LEDPower/LEDPowerPortAi.xml</import_port_type>
+
+    <ports>
+        <port name ="ON_OFF" data_type="BodySensor::LEDPower" kind = "sync_input" max_number="1">
+        </port>
+    </ports>
+
+</component>

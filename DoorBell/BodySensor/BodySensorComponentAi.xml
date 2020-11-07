@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../Autocoders/schema/ISF/component_schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+<component name="BodySensor" kind="passive" namespace="DoorBell" modeler="true">
+
+    <import_port_type>Fw/Log/LogPortAi.xml</import_port_type>
+    <import_port_type>Svc/Sched/SchedPortAi.xml</import_port_type>
+    <import_port_type>Fw/Tlm/TlmPortAi.xml</import_port_type>
+    <import_port_type>DoorBell/LEDPower/LEDPowerPortAi.xml</import_port_type>
+    <import_dictionary>DoorBell/BodySensor/Telemetry.xml</import_dictionary>
+    <import_dictionary>DoorBell/BodySensor/Events.xml</import_dictionary>
+    <ports>
+
+        <port name="eventOut" data_type="Fw::Log"  kind="output" role="LogEvent"    max_number="1">
+        </port>
+
+        <port name="schedIn" data_type="Svc::Sched"  kind="sync_input"    max_number="1">
+        </port>
+
+        <port name="tlmOut" data_type="Fw::Tlm"  kind="output" role="Telemetry"    max_number="1">
+        </port>
+
+        <port name ="ON_OFF" data_type="BodySensor::LEDPower" kind = "output"  max_number="1">
+        </port>
+
+    </ports>
+
+</component>

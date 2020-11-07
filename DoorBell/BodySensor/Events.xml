@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="file:../xml/ISF_Component_Schema.rnc" type="compact"?>
+
+<!--====================================================================== 
+
+  GpsApp/Gps/Events.xml
+
+======================================================================-->
+
+<events>
+
+  <event
+    id="0"
+    name="BodySensor_ON"
+    severity="ACTIVITY_HI"
+    format_string="LED light is turning ON"
+  >
+    <comment>LED goes on</comment>
+  </event>
+
+  <event
+    id="1"
+    name="BodySensor_OFF"
+    severity="ACTIVITY_HI"
+    format_string="LED light is turning OFF"
+  >
+    <comment>LED goes off</comment>
+  </event>
+
+</events>

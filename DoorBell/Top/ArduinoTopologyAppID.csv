@@ -1,0 +1,13 @@
+component,instance,base_id,base_window_range
+ActiveRateGroup,rateGroup10HzComp,200,20
+ActiveRateGroup,rateGroup1HzComp,300,20
+TlmChan,chanTlm,400,20
+CommandDispatcher,cmdDisp,500,20
+Health,health,1100,20
+ActiveLogger,eventLogger,1400,20
+RateGroupDriver,rateGroupDriverComp,1700,20
+GroundInterface,groundInterface,1800,20
+HardwareRateDriver,hardwareRateDriver,2000,20
+SerialDriver,comm,2100,20
+BodySensor,bodySensor,2200,20
+Light,light,2300,20

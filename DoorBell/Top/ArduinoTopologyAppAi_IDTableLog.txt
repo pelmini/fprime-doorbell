@@ -1,0 +1,22 @@
+     INSTANCE NAME      | BASE ID (HEX) | REQUESTED WINDOW SIZE | DIFFERENCED ID WINDOW SIZE | LARGEST COMPONENT INTERNAL ID | MAX AMOUNT OF IDS
+   rateGroup10HzComp    |  200 (0xc8)   |          20           |            100             |               2               |         2        
+   rateGroup1HzComp     |  300 (0x12c)  |          20           |            100             |               2               |         2        
+        chanTlm         |  400 (0x190)  |          20           |            100             |             None              |         0        
+        cmdDisp         |  500 (0x1f4)  |          20           |            600             |              10               |        10        
+        health          | 1100 (0x44c)  |          20           |            300             |               8               |         8        
+      eventLogger       | 1400 (0x578)  |          20           |            300             |               7               |         7        
+  rateGroupDriverComp   | 1700 (0x6a4)  |          20           |            100             |             None              |         0        
+    groundInterface     | 1800 (0x708)  |          20           |            200             |               1               |         1        
+  hardwareRateDriver    | 2000 (0x7d0)  |          20           |            100             |             None              |         0        
+         comm           | 2100 (0x834)  |          20           |            100             |             None              |         0        
+      bodySensor        | 2200 (0x898)  |          20           |            100             |               2               |         2        
+         light          | 2300 (0x8fc)  |          20           |            inf.            |             None              |         0        
+-------------------------------------------------------------------------------------------------------------------------------------
+| INSTANCE NAME                 - Name of the instance object.                                                                      |
+| BASE ID (HEX)                 - Base ID set for the instance.                                                                     |
+| REQUESTED WINDOW SIZE         - Specified by either the 'base_id_range' attribute in the instance tag or by finding the max of th |
+|                                 e 'base_id_range' attribute in the topology tag and the largest internal ID of the instance.      |
+| DIFFERENCED ID WINDOW SIZE    - Calculated by subtracting the current base ID from the next base ID.                              |
+| LARGEST COMPONENT INTERNAL ID - The largest ID found in the events, channels, and commands of the instance.                       |
+| MAX AMOUNT OF IDS             - The largest amount of items from either events, channels, or commands.                            |
+-------------------------------------------------------------------------------------------------------------------------------------

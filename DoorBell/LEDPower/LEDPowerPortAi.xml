@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="file:../xml/ISF_Type_Schema.rnc" type="compact"?>
+<interface name="LEDPower" namespace="DoorBell">
+    <comment>
+        LED Power port
+    </comment>
+    <args>
+        <arg name="TurnOn" type="bool" pass_by="value">
+            <comment>LED turns on or off based on bool value</comment>
+        </arg>
+    </args>
+</interface>
