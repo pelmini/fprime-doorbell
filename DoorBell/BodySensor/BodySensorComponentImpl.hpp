@@ -56,6 +56,15 @@ namespace DoorBell {
           NATIVE_UINT_TYPE context /*!< The call order*/
       );
 
+      //! Implementation for Sensor_Sensitivity command handler
+      //!
+      void Sensor_Sensitivity_cmdHandler(
+              const FwOpcodeType opCode, /*!< The opcode*/
+              const U32 cmdSeq, /*!< The command sequence number*/
+              U32 Sensitivity_Lvl
+      );
+
+      unsigned int sensitivity_lvl;
       unsigned int count;
       unsigned int bodyCount;
 

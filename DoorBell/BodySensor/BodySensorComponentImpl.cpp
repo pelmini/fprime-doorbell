@@ -29,6 +29,7 @@ namespace DoorBell {
   {
     count = 0;
     bodyCount = 0;
+    sensitivity_lvl = 150;
   }
 
   void BodySensorComponentImpl ::
@@ -57,7 +58,7 @@ namespace DoorBell {
     int val = 0;
     val = analogRead(A6);
 
-    if(val > 150 && count == 0)
+    if(val > sensitivity_lvl && count == 0)
     {
       log_ACTIVITY_HI_BodySensor_ON();
       ON_OFF_out(0, true);
@@ -83,5 +84,15 @@ namespace DoorBell {
       count--;
     }
   }
+    void BodySensorComponentImpl ::
+    Sensor_Sensitivity_cmdHandler(
+            const FwOpcodeType opCode,
+            const U32 cmdSeq,
+            U32 Sensitivity_Lvl
+    )
+    {
+        sensitivity_lvl = Sensitivity_Lvl;
+        this->cmdResponse_out(opCode,cmdSeq,Fw::COMMAND_OK);
+    }
 
 } // end namespace DoorBell

@@ -78,6 +78,10 @@
         <source component = "health" port = "CmdReg" type = "CmdReg" num = "0"/>
         <target component = "cmdDisp" port = "compCmdReg" type = "CmdReg" num = "2"/>
     </connection>
+    <connection name = "bodySensor" >
+        <source component = "bodySensor" port = "CmdReg" type = "CmdReg" num = "0"/>
+        <target component = "cmdDisp" port = "compCmdReg" type = "CmdReg" num = "3"/>
+    </connection>
 
     <!-- Command Dispatch Ports - Dispatch port number must match registration port for each component -->
 
@@ -93,6 +97,10 @@
         <source component = "cmdDisp" port = "compCmdSend" type = "Cmd" num = "2"/>
         <target component = "health" port = "CmdDisp" type = "Cmd" num = "0"/>
     </connection>
+    <connection name = "bodySensor">
+        <source component = "cmdDisp" port = "compCmdSend" type = "Cmd" num = "3"/>
+        <target component = "bodySensor" port = "CmdDisp" type = "Cmd" num = "0"/>
+    </connection>
 
     <!-- Command Reply Ports - Go to the same response port on the dispatcher -->
 
@@ -106,6 +114,10 @@
     </connection>
     <connection name = "HealthReply">
        <source component = "health" port = "CmdStatus" type = "CmdResponse" num = "0"/>
+        <target component = "cmdDisp" port = "compCmdStat" type = "CmdResponse" num = "0"/>
+    </connection>
+    <connection name = "bodySensor">
+        <source component = "bodySensor" port = "CmdStatus" type = "CmdResponse" num = "0"/>
         <target component = "cmdDisp" port = "compCmdStat" type = "CmdResponse" num = "0"/>
     </connection>
 

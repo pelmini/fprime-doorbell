@@ -27,6 +27,7 @@ void constructApp();
 #include <fprime-arduino/ArduinoDrv/SerialDriver/SerialDriver.hpp>
 #include <DoorBell/BodySensor/BodySensorComponentImpl.hpp>
 #include <DoorBell/Light/LightComponentImpl.hpp>
+#include <Os/Baremetal/TaskRunner/TaskRunner.hpp>
 
 //Core components. Gotta run them all
 extern Svc::RateGroupDriverImpl rateGroupDriverComp;
@@ -49,4 +50,5 @@ extern DoorBell::LightComponentImpl light;
 #ifdef COMM_SERIAL
   extern Arduino::SerialDriverComponentImpl comm;
 #endif
+  extern Os::TaskRunner taskRunner;
 #endif

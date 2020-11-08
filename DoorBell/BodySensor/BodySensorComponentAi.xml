@@ -9,6 +9,7 @@
     <import_port_type>DoorBell/LEDPower/LEDPowerPortAi.xml</import_port_type>
     <import_dictionary>DoorBell/BodySensor/Telemetry.xml</import_dictionary>
     <import_dictionary>DoorBell/BodySensor/Events.xml</import_dictionary>
+    <import_dictionary>DoorBell/BodySensor/Commands.xml</import_dictionary>
     <ports>
 
         <port name="eventOut" data_type="Fw::Log"  kind="output" role="LogEvent"    max_number="1">

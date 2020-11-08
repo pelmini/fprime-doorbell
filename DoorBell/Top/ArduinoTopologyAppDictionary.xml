@@ -150,6 +150,11 @@
     <command component="eventLogger" mnemonic="ALOG_DUMP_FILTER_STATE" opcode="0x57c">
       <args/>
     </command>
+    <command component="bodySensor" mnemonic="Sensor_Sensitivity" opcode="0x899">
+      <args>
+        <arg name="Sensitivity_Lvl" type="U32"/>
+      </args>
+    </command>
   </commands>
   <events>
     <event component="rateGroup10HzComp" name="RateGroupStarted" id="0xc8" severity="DIAGNOSTIC" format_string="Rate group started.">

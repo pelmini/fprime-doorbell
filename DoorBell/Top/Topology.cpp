@@ -78,6 +78,7 @@ void constructApp() {
     cmdDisp.regCommands();
     eventLogger.regCommands();
     health.regCommands();
+    bodySensor.regCommands();
 
     // Setup the health an ping entries. These need to be in the same order as the
     // ports connected to the health component. Once the ping entry array is created

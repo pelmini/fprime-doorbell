@@ -20,7 +20,7 @@
 project(DoorBell C CXX ASM)
 cmake_minimum_required(VERSION 3.5)
 
-set(BAREMETAL_SCHEDULER CACHE BOOL ON "Uses the baremtal scheduler")
+set(BAREMETAL_SCHEDULER "ON")
 ##
 # Section 2: F´ Core
 #

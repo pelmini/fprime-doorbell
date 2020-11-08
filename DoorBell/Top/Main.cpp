@@ -34,11 +34,9 @@ int main(int argc, char* argv[]) {
 #endif
     Fw::Logger::logMsg("[SETUP] Constructing system\n", 0, 0, 0, 0, 0, 0);
     constructApp();
-#ifndef ARDUINO
     while (1) {
         // Start the task for the rate group
         taskRunner.run();
     }
-#endif
     return 0;
 }
